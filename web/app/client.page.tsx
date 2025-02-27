@@ -11,6 +11,8 @@ interface Data {
 }
 
 export default function Home() {
+  console.log(88888);
+
   const [data, setData] = useState<Data | null>(null);
   const [serverActionResult, setServerActionResult] = useState<{
     status: "success" | "error";

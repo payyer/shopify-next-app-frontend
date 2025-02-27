@@ -5,8 +5,8 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Next.js Shopify App",
   other: {
-    "shopify-api-key": process.env.NEXT_PUBLIC_SHOPIFY_API_KEY || "",
-    "shopify-app-origins": process.env.NEXT_PUBLIC_HOST || "",
+    "shopify-api-key": process.env.SHOPIFY_API_KEY || "",
+    "shopify-app-origins": process.env.API_HOST || "",
   },
 };
 
