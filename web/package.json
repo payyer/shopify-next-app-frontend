@@ -3,7 +3,7 @@
   "version": "2.0.1",
   "license": "MIT",
   "scripts": {
-    "build": "next build && next-on-pages",
+    "build": "next-on-pages",
     "deploy": "wrangler pages deploy .vercel/output/static --project-name=shopify-next-app-frontend",
     "dev": "next dev",
     "start": "next start"
