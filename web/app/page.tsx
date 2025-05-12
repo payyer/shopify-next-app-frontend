@@ -1,5 +1,7 @@
 import Home from "./client.page";
 
+export const runtime = "edge";
+
 export default async function Page({
   params,
   searchParams,
