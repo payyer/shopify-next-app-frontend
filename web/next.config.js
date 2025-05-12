@@ -8,7 +8,7 @@ const nextConfig = {
     NEXT_PUBLIC_SHOPIFY_API_KEY: process.env.SHOPIFY_API_KEY,
   },
   experimental: {
-    serverActions: true, // nếu bạn đang dùng App Router
+    serverActions: {}, // nếu bạn đang dùng App Router
   },
 };
 
