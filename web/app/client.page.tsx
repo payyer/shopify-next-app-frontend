@@ -1,5 +1,5 @@
 "use client";
-
+import { useSearchParams } from "next/navigation";
 import { useAppBridge } from "@shopify/app-bridge-react";
 import { Button, LegacyCard as Card, Page, Text } from "@shopify/polaris";
 import Link from "next/link";
@@ -11,6 +11,10 @@ interface Data {
 }
 
 export default function Home() {
+  const searchParams = useSearchParams();
+  const shop = searchParams.get("shop");
+  const host = searchParams.get("host");
+
   const [data, setData] = useState<Data | null>(null);
   const [serverActionResult, setServerActionResult] = useState<{
     status: "success" | "error";
@@ -29,6 +33,10 @@ export default function Home() {
       console.log(err);
     }
   };
+
+  if (!shop || !host) {
+    return <h1>Missing Shop and Host Parameters</h1>;
+  }
 
   return (
     <Page title="Home">

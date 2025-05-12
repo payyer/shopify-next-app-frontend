@@ -1,0 +1,11 @@
+name = "shopify-next-app-frontend"
+compatibility_date = "2024-05-01"
+pages_build_output_dir = "./.vercel/output/static"
+build_command = "npm run build"
+upload_format = "service-worker"
+
+[build]
+command = "npx @cloudflare/next-on-pages --experimental-minify"
+
+[[plugins]]
+name = "@cloudflare/next-on-pages"

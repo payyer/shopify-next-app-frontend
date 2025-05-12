@@ -1,14 +1,5 @@
 import Providers from "@/app/providers/providers";
-import { Metadata } from "next";
 import "./globals.css";
-
-export const metadata: Metadata = {
-  title: "Next.js Shopify App",
-  other: {
-    "shopify-api-key": process.env.SHOPIFY_API_KEY || "",
-    "shopify-app-origins": process.env.API_HOST || "",
-  },
-};
 
 export default async function RootLayout({
   children,
@@ -19,6 +10,11 @@ export default async function RootLayout({
     <html lang="en">
       <head>
         {/* eslint-disable-next-line @next/next/no-sync-scripts */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta shopify-api-key={process.env.SHOPIFY_API_KEY} />
+        <meta shopify-app-origins={process.env.API_HOST} />
+        <meta name="shopify-api-key" content={process.env.SHOPIFY_API_KEY} />
+        <meta name="shopify-app-origins" content={process.env.API_HOST} />
         <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js" />
       </head>
       <body>
