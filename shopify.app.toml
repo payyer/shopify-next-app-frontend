@@ -1,6 +1,6 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "add7504331733e92252623482056ef16"
+client_id = "85bfee3256e0a99d3666039f462d2467"
 name = "app next template"
 application_url = "https://federal-aside-admissions-festival.trycloudflare.com"
 embedded = true

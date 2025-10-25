@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams } from "next/navigation";
-import { useAppBridge } from "@shopify/app-bridge-react";
+// import { useAppBridge } from "@shopify/app-bridge-react";
 import { Button, LegacyCard as Card, Page, Text } from "@shopify/polaris";
 import Link from "next/link";
 import { useState } from "react";
@@ -20,7 +20,7 @@ export default function Home() {
     status: "success" | "error";
   }>();
 
-  const app = useAppBridge();
+  // const app = useAppBridge();
 
   const handleGetAPIRequest = async () => {
     try {
@@ -34,15 +34,15 @@ export default function Home() {
     }
   };
 
-  if (!shop || !host) {
-    return <h1>Missing Shop and Host Parameters</h1>;
-  }
+  // if (!shop || !host) {
+  //   return <h1>Missing Shop and Host Parameters</h1>;
+  // }
 
   return (
     <Page title="Home">
       <div className="flex items-center justify-center gap-1 p-2 bg-slate-800 text-white rounded-lg mb-2 shadow-lg">
         <p className="font-medium text-[1rem]">
-          We can also use tailwindcss in this project!
+          We can also use tailwindcss in this project! 2222
         </p>
       </div>
       <Card
@@ -70,7 +70,7 @@ export default function Home() {
         primaryFooterAction={{
           content: "Server action",
           onAction: async () => {
-            const token = await app.idToken();
+            // const token = await app.idToken();
           },
         }}
       >
